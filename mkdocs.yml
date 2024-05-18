@@ -1,0 +1,143 @@
+site_name: Mkdocs template
+site_description: Template for mkdocs.
+site_author: Brian Kim
+site_url: https://bryokim.github.io/mkdocs-template
+
+repo_url: https://github.com/bryokim/mkdocs-template
+repo_name: bryokim/mkdocs-template
+docs_dir: docs/
+
+edit_uri: edit/main/docs/
+
+copyright: Copyright &copy; 2024 Brian Kim
+
+nav:
+  - Home:
+      - index.md
+
+theme:
+  name: material
+  features:
+    - content.action.edit # Edit page in github
+    - content.action.view # View page in github
+    - content.code.copy # Copy code blocks
+    - content.tooltips # Better tooltip than browser default
+    # - header.autohide
+    - navigation.instant # Makes site act like SPA
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.top # Back to top button
+    # - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.footer
+
+    - search.suggest
+    - search.highlight
+    - search.share
+
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/file-document-edit-outline
+    view: material/file-eye-outline
+    logo: material/access-point-check
+
+  palette:
+    # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+      primary: blue
+      accent: teal
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to system preference
+      primary: light blue
+      accent: teal
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/bryokim
+      name: Brian on Github
+
+    - icon: fontawesome/brands/docker
+      link: "#"
+      name: Docker
+
+    - icon: fontawesome/brands/x-twitter
+      link: "#"
+      name: Twitter
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  # Mermaid Diagrams
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  
+  # Code blocks
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+  # Formatting
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.emoji
+
+  # Admonition
+  - admonition
+  - pymdownx.details
+
+  - md_in_html
+  - abbr
+  - attr_list
+  - tables
+
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg # lists
+
+
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+  # Tabs
+  - pymdownx.tabbed:
+      alternate_style: true
+      combine_header_slug: true
+
+plugins:
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago
+      fallback_to_build_date: true
+  - git-committers:
+      repository: bryokim/mkdocs-template
+      branch: main
+
+  - search
