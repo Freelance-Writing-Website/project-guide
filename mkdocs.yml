@@ -1,19 +1,29 @@
-site_name: Mkdocs template
-site_description: Template for mkdocs.
+site_name: Freelance Writing Website Project Guide
+site_description: Project guide for the Freelance Writing Website.
 site_author: Brian Kim
-site_url: https://bryokim.github.io/mkdocs-template
+site_url: https://freelance-writing-website.github.io/project-guide/
 
-repo_url: https://github.com/bryokim/mkdocs-template
-repo_name: bryokim/mkdocs-template
+repo_url: https://github.com/Freelance-Writing-Website/project-guide
+repo_name: Freelance-Writing-Website/project-guide
 docs_dir: docs/
 
 edit_uri: edit/main/docs/
 
-copyright: Copyright &copy; 2024 Brian Kim
+copyright: Copyright &copy; 2024 Freelance Writing Website
 
 nav:
   - Home:
       - index.md
+  - MVP:
+      - mvp/description.md
+      - mvp/goals-and-context.md
+      - mvp/user-personas-and-stories.md
+      - mvp/sitemap-and-page-descriptions.md
+      - mvp/wireframes.md
+  - Technical Details:
+      - technical-details/architecture.md
+      - technical-details/technologies.md
+      - technical-details/mockups.md
 
 theme:
   name: material
@@ -30,16 +40,20 @@ theme:
     # - navigation.tabs.sticky
     - navigation.sections
     - navigation.footer
+    - navigation.expand
 
     - search.suggest
     - search.highlight
     - search.share
 
+    - toc.follow
+    # - toc.integrate
+
   icon:
     repo: fontawesome/brands/github
     edit: material/file-document-edit-outline
     view: material/file-eye-outline
-    logo: material/access-point-check
+    logo: material/pencil-box-outline
 
   palette:
     # Palette toggle for automatic mode
@@ -69,8 +83,8 @@ theme:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/bryokim
-      name: Brian on Github
+      link: https://github.com/Freelance-Writing-Website
+      name: Freelance Writing Website on Github
 
     - icon: fontawesome/brands/docker
       link: "#"
@@ -89,8 +103,9 @@ markdown_extensions:
       custom_fences:
         - name: mermaid
           class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
-  
+          format:
+            !!python/name:pymdownx.superfences.fence_code_format 
+            
   # Code blocks
   - pymdownx.highlight:
       anchor_linenums: true
@@ -137,7 +152,7 @@ plugins:
       type: timeago
       fallback_to_build_date: true
   - git-committers:
-      repository: bryokim/mkdocs-template
+      repository: Freelance-Writing-Website/project-guide
       branch: main
 
   - search

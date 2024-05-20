@@ -1,9 +1,7 @@
-# Mkdocs template
+# Project Guide
 
-Template with most crucial references and plugins configured.
+:wave: Welcome to the Freelance Writing Website's project guide.
 
-Check `mkdocs.yml` to change the site details and repository.
-
-!!! example ""
-
-    Have fun documenting.
+Here, you'll find comprehensive documentation, including project specifications,
+design blueprints, user guides, and technical insights.
+It's the go-to website for understanding the project's goals, structure, and implementation.
