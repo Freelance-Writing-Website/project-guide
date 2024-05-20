@@ -77,7 +77,7 @@ theme:
       toggle:
         icon: material/brightness-auto
         name: Switch to system preference
-      primary: light blue
+      primary: blue
       accent: teal
 
 extra:
@@ -94,8 +94,8 @@ extra:
       link: "#"
       name: Twitter
 
-extra_css:
-  - stylesheets/extra.css
+# extra_css:
+#   - stylesheets/extra.css
 
 markdown_extensions:
   # Mermaid Diagrams
