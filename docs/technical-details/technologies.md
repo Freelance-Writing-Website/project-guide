@@ -8,16 +8,25 @@
 
 ## Frontend
 		
-    - Frameworks: React.js or Angular.js
-    - Styling: CSS3, Sass, Bootstrap
-    - State Management: Redux or Context API
+    - Frameworks: React.js
+    - Styling: CSS3, Sass, Bootstrap. Tailwind
+    - State Management: Context API
+
+!!! Note ""
+
+	Figma used for designing the mockups
 		
 ## Backend
 
-    - Framework: Node.js with Express.js
+    - Framework: FastAPI
     - Database: MongoDB or PostgreSQL
-    - Authentication: JWT (JSON Web Tokens)
+    - Authentication: Supabase, JWT (JSON Web Tokens)
     - File Storage: AWS S3 or Google Cloud Storage
+
+???+ Info "File Storage"
+
+	MongoBD and Supabase storage can be used at this time to store the documnets
+ 	as the AWS S# and GCS are being deliberated on.
 		
 ## DevOps
 
@@ -25,3 +34,8 @@
     - Continuous Integration: Jenkins or GitHub Actions
     - Hosting: AWS, Heroku, or DigitalOcean
     - Monitoring: New Relic or Prometheus
+
+???+ Info "Hosting and Monitoring"
+
+	The hosting site and monitoring technologies will be determined later in
+ 	development.
